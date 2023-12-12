@@ -1,1 +1,84 @@
 /* Write your CSS here! */
+
+/*Style the tarot card images*/
+
+/*Rule 1*/
+body {
+    margin: 8px;
+    /*display: block;*/
+}
+/*Rule 2*/
+#mainHeading {
+    color: maroon;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+/*Rule 3*/
+#testP.funParagraph {
+    text-align: center;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', serif
+
+}
+/*float image to the right of the browser*/
+.right-float-image {
+    float: right;
+    width: 20%;             
+    display: block;         /*I think this rule is redundant. It's supposed to make the image start on a new line and take up the alloted width. SO also keeps images from overlapping? */
+    margin-left: 20px;         /**/
+}
+.content-box {
+    border: 5px solid blue;   /**/  
+    padding: 10px;              /**/
+    margin: 10px;             /*space between sections*/
+}
+/*clearfix: Targets psuedo element, child of .content box. this puts our content box around the card images*/
+.content-box::after {
+    content: "";
+    display: table; /*generates anon block level box. clears previous floats, makes the container contain */
+    clear: both; /*clears left and right floats*/
+}
+/*border for h2s within content-box*//**/
+.content-box h2 {
+    border-bottom: 5px solid blue;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 40px;
+}
+.content-box p {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+content-box ul {
+    font-family: Georgia, 'Times New Roman', serif
+}
+content-box ol {
+    font-family: Georgia, 'Times New Roman', serif
+}
+#centered-image {           
+    max-width: 100%;
+    margin: 0 auto;
+}
+#opening {
+    font-family: 'Goudy Old Style', serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+/*needed a special content box to edit the one with a gif. did not work...*/
+/* .content-box-special {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+}
+
+.content-box-special .right-float-image {
+    float: right; 
+    margin-left: 20px;
+}
+
+.content-box-special .left-content {
+    flex-grow: 1; 
+    text-align: center;
+} */

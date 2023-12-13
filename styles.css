@@ -9,7 +9,7 @@ body {
 }
 /*Rule 2*/
 #mainHeading {
-    color: maroon;
+    color: red;
     font-size: 25px;
     text-align: center;
     margin-bottom: 20px;
@@ -19,14 +19,14 @@ body {
 #testP.funParagraph {
     text-align: center;
     font-size: 15px;
-    font-family: Georgia, 'Times New Roman', serif
-
+    font-family: Georgia, 'Times New Roman', serif;
+    color: green;
 }
 /*float image to the right of the browser*/
 .right-float-image {
     float: right;
     width: 20%;             
-    display: block;         /*I think this rule is redundant. It's supposed to make the image start on a new line and take up the alloted width. SO also keeps images from overlapping? */
+    display: flex;         /*I think this rule is redundant. It's supposed to make the image start on a new line and take up the alloted width. SO also keeps images from overlapping? */
     margin-left: 20px;         /**/
 }
 .content-box {
@@ -38,7 +38,7 @@ body {
 .content-box::after {
     content: "";
     display: table; /*generates anon block level box. clears previous floats, makes the container contain */
-    clear: both; /*clears left and right floats*/
+    clear: both;    /*clears left and right floats*/
 }
 /*border for h2s within content-box*//**/
 .content-box h2 {
